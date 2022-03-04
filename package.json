@@ -1,0 +1,29 @@
+{
+    "name": "ians-discord-bot",
+    "version": "0.1.0",
+    "description": "A discord bot for Ian's Discord server",
+    "author": "Ian",
+    "license": "MIT",
+    "scripts": {
+        "build-ts": "tsc",
+        "build": "npm run build-ts",
+        "serve": "node dist/server.js",
+        "start": "npm run serve",
+        "watch-node": "nodemon dist/server.js",
+        "watch-ts": "tsc -w",
+        "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\""
+    },
+    "dependencies": {
+        "dotenv": "8.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^14.18",
+        "concurrently": "6.0.2",
+        "nodemon": "^2.0.15",
+        "ts-node": "9.1.1",
+        "typescript": "4.1.3"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
